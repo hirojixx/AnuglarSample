@@ -1,36 +1,32 @@
 .container {
+  height: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 0.2fr 0.3fr 2.5fr;
+  grid-template-rows: repeat(2, 0.3fr) 3.8fr 0.3fr;
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
-    "Haeder Haeder Haeder"
+    "Header Header Header"
     "Navigation Navigation Navigation"
-    "Contents Contents Contents";
+    "MainContents MainContents MainContents"
+    "Footer Footer Footer";
 }
 
-.Haeder {
-  grid-area: Haeder;
+.Header {
+  grid-area: Header;
 }
 
 .Navigation {
   grid-area: Navigation;
 }
 
-.Contents {
-  display: grid;
-  grid-template-columns: 0.4fr 2.2fr 0.4fr;
-  grid-template-rows: 0.4fr 2.2fr 0.4fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    ". . ."
-    ". Modal ."
-    ". . .";
-  grid-area: Contents;
+.Footer {
+  grid-area: Footer;
+  width: 100%;
+  text-align: center;
+  border-top: black solid 1px;
 }
 
-.Modal {
-  grid-area: Modal;
+.MainContents {
+  grid-area: MainContents;
 }

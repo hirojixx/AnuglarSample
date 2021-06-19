@@ -10,6 +10,7 @@ import { HeaderComponent } from './organisms/header/header.component';
 import { NavigationComponent } from './organisms/navigation/navigation.component';
 import { ContentComponent } from './organisms/content/content.component';
 import { LoginPageComponent } from './templates/login-page/login-page.component';
+import { LoginModalComponent } from './organisms/login-modal/login-modal.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { LoginPageComponent } from './templates/login-page/login-page.component'
     HeaderComponent,
     NavigationComponent,
     ContentComponent,
-    LoginPageComponent
+    LoginPageComponent,
+    LoginModalComponent
   ],
   imports: [
     BrowserModule,

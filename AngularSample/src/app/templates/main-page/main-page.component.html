@@ -1,7 +1,10 @@
 <div class="container">
-  <div class="Haeder"></div>
-  <div class="Navigation"></div>
-  <div class="Contents">
-    <div class="Modal"></div>
+  <div class="Header"><app-header></app-header></div>
+  <div class="Navigation"><app-navigation></app-navigation></div>
+  <div class="MainContents">
+    <app-content></app-content>
+  </div>
+  <div class="Footer">
+    <a [routerLink]="[ '/' ]">go to Login Page</a>
   </div>
 </div>
