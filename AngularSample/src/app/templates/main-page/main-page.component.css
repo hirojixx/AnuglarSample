@@ -1,0 +1,36 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 0.2fr 0.3fr 2.5fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Haeder Haeder Haeder"
+    "Navigation Navigation Navigation"
+    "Contents Contents Contents";
+}
+
+.Haeder {
+  grid-area: Haeder;
+}
+
+.Navigation {
+  grid-area: Navigation;
+}
+
+.Contents {
+  display: grid;
+  grid-template-columns: 0.4fr 2.2fr 0.4fr;
+  grid-template-rows: 0.4fr 2.2fr 0.4fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". . ."
+    ". Modal ."
+    ". . .";
+  grid-area: Contents;
+}
+
+.Modal {
+  grid-area: Modal;
+}

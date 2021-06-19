@@ -1,2 +1,3 @@
 # AnuglarSample
-AnuglarSample
+AnuglarSampleのサンプルです
+
