@@ -13,6 +13,8 @@
 #login {
   width: 100%;
   text-align: center;
+  font-size: x-large;
+  text-decoration: none;
 }
 
 .modal {

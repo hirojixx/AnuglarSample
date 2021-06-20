@@ -1,3 +1,15 @@
 <div id="content">
-  <p>main content</p>
+  <div [ngSwitch]="this.clickButton">
+    <!-- ngIfでも代用可能
+        今回は可読性重視でngSwichを利用
+        Input及びOutputを用いることでコンポーネント間の連携を実現しているが
+        本来的にはこのようなバケツリレーでの連携は好ましくない
+        今回はわかりやすさのために利用している
+     -->
+    <app-content1 *ngSwitchCase="1"></app-content1>
+    <app-content2 *ngSwitchCase="2"></app-content2>
+    <app-content3 *ngSwitchCase="3"></app-content3>
+    <app-content4 *ngSwitchCase="4"></app-content4>
+    <app-content5 *ngSwitchCase="5"></app-content5>
+  </div>
 </div>

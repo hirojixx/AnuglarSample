@@ -1,27 +1,38 @@
 # AngularSample
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.5.
+通常 ng serve で実行可能
 
-## Development server
+ログインページ及びメインページを作成
+ログインページは画面遷移するためだけの飾りとして実装
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+表示コンテンツの切り替え部分は ngSwich を利用
+ngIf を用いた表記でも代用は可能だが可読性重視で実装を行った。
+Input 及び Output を用いることでコンポーネント間の連携を実現しているが
+本来的にはこのようなバケツリレーでの連携は好ましくない。
+今回はわかりやすさのために利用している。
 
-## Code scaffolding
+データ連携に関しては RxJS 等のストリームでの状態管理や最低でもイベント駆動的なアプローチが好ましい。
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+今回のフォルダ構造は AtomicDesine をベースに行った
 
-## Build
+pages
+データを子に渡すためのコンポーネント
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+templates
+画面のテンプレートを作成する
+データのフェッチや定義等は行わない
 
-## Running unit tests
+organisms
+画面として意味のある単位
+今回はヘッダー、フッター、メインコンテンツ等の単位で切り分けを行った
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+molecules
+単体で意味のある単位
+ナビゲーションリスト
+検索フォーム等
+それだけでは機能としては利用できないが意味のあるもの
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+atoms
+それ単体には意味のないもの
+ボタン
+フォームの入力フィールド等

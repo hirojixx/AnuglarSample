@@ -1,13 +1,14 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
-  selector: 'app-navigation',
-  templateUrl: './navigation.component.html',
-  styleUrls: ['./navigation.component.css']
+  selector: 'app-button-list',
+  templateUrl: './button-list.component.html',
+  styleUrls: ['./button-list.component.css']
 })
-export class NavigationComponent implements OnInit {
-  @Input() buttons:string[] = []
+export class ButtonListComponent implements OnInit {
+  @Input() buttons: string[] = []
   @Output() clickIcon = new EventEmitter<number>();
+
 
   constructor() { }
 

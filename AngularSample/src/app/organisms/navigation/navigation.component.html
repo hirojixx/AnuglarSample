@@ -1,3 +1,4 @@
-<div class="navigation">
-  <p>Navigation</p>
+<div class="navigation flex">
+  <div>Navigation</div>
+  <app-button-list [buttons]='this.buttons' (clickIcon)='getClickButtonNumber($event)'></app-button-list>
 </div>
