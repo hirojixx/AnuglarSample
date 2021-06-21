@@ -1,4 +1,5 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { NavigationServiceService } from 'src/app/service/navigation-service.service';
 
 @Component({
   selector: 'app-button',
@@ -6,17 +7,15 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   styleUrls: ['./button.component.css']
 })
 export class ButtonComponent implements OnInit {
-  @Input() buttons: string[] = []
-  @Output() clickIcon = new EventEmitter<number>();
+  buttons:string[] = []
 
-  constructor() { }
+  constructor(public navigationServiceService:NavigationServiceService) { }
 
   ngOnInit(): void {
   }
 
   buttonClick(button:string){
-    const clickNumber = parseInt(button.substring(4));
-    this.clickIcon.emit(clickNumber);
+    this.navigationServiceService.emitButtons(button);
   }
 
 }

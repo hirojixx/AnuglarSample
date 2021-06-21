@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-button-list',
@@ -6,17 +6,11 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   styleUrls: ['./button-list.component.css']
 })
 export class ButtonListComponent implements OnInit {
-  @Input() buttons: string[] = []
-  @Output() clickIcon = new EventEmitter<number>();
 
 
   constructor() { }
 
   ngOnInit(): void {
-  }
-
-  getClickButtonNumber(buttonNumber:number){
-    this.clickIcon.emit(buttonNumber);
   }
 
 }

@@ -1,1 +1,1 @@
-<button *ngFor="let button of this.buttons" type="button" (click)="this.buttonClick(button)">{{button}}</button>
+<button *ngFor="let button of navigationServiceService.getButtons() | async" type="button" (click)="this.buttonClick(button)">{{button}}</button>
